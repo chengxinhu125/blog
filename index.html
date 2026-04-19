@@ -12,8 +12,6 @@
         header .avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
         header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; letter-spacing: 2px; }
         header p { opacity: 0.7; font-size: 0.95rem; }
-        nav { background: white; padding: 0.8rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
-        nav a { color: #667eea; text-decoration: none; font-weight: 500; margin: 0 1rem; }
         .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; display: grid; grid-template-columns: 1fr 280px; gap: 1.5rem; }
         @media (max-width: 700px) { .container { grid-template-columns: 1fr; } }
         .main-title { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #667eea; }
@@ -36,6 +34,9 @@
         aside .widget a { color: #555; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
         aside .widget a:hover { color: #667eea; }
         aside .widget p { color: #888; font-size: 0.82rem; line-height: 1.6; }
+        .pagination { text-align: center; padding: 1rem 0; }
+        .pagination a { display: inline-block; padding: 6px 16px; background: white; color: #667eea; text-decoration: none; border-radius: 20px; font-size: 0.88rem; margin: 0 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .pagination a:hover { background: #667eea; color: white; }
         footer { background: #1a1a2e; color: rgba(255,255,255,0.5); text-align: center; padding: 2rem 1rem; font-size: 0.82rem; margin-top: 2rem; }
         footer span { color: #667eea; }
     </style>
@@ -46,9 +47,9 @@
         <h1>小波工作博客</h1>
         <p>记录工作 · 沉淀思考 · 分享成长</p>
     </header>
-    <nav>
-        <a href="index.html">🏠 首页</a>
-        <a href="music.html">🎵 音乐</a>
+    <nav style="background:white;padding:0.8rem;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,0.06);">
+        <a href="index.html" style="color:#667eea;text-decoration:none;font-weight:500;margin:0 1rem;">🏠 首页</a>
+        <a href="music.html" style="color:#667eea;text-decoration:none;font-weight:500;margin:0 1rem;">🎵 音乐</a>
     </nav>
     <div class="container">
         <main>
@@ -58,26 +59,18 @@
             </div>
 
             <article>
-                <span class="tag">🏛️ 学习笔记</span>
-                <h3>初二政治下册：第四单元 崇尚法治精神</h3>
-                <div class="date">2026年4月19日</div>
-                <p class="summary">自由平等价值观 + 公平正义核心考点，第七、八课完整梳理...</p>
-                <a class="read-more" href="articles/第四单元-崇尚法治精神.html">阅读全文 →</a>
-            </article>
-
-            <article>
-                <span class="tag">🏛️ 学习笔记</span>
-                <h3>初二政治下册：第三单元 人民当家作主</h3>
-                <div class="date">2026年4月19日</div>
-                <p class="summary">人民代表大会制度 + 基本政治制度 + 社会主义基本经济制度完整梳理...</p>
-                <a class="read-more" href="articles/第三单元-人民当家作主.html">阅读全文 →</a>
-            </article>
-
-            <article>
                 <span class="tag">📖 读书笔记</span>
                 <h3>《底层逻辑》第三章：个体进化的底层逻辑</h3>
                 <div class="date">2026年4月18日</div>
-                <p class="summary">能力×效率×杠杆：人生商业模式的核心公式，能力圈决定你能走多远...</p>
+                <p class="summary">能力圈决定了你的成功——知道自己的能力边界，比盲目扩张更重要。核心观点：当你清晰地认知自己的能力圈边界时，才能做出真正理性的决策...</p>
+                <a class="read-more" href="#">阅读全文 →</a>
+            </article>
+
+            <article>
+                <span class="tag">🏛️ 学习笔记</span>
+                <h3>初二政治下册：第一单元 坚持宪法至上</h3>
+                <div class="date">2026年4月18日</div>
+                <p class="summary">宪法是国家的根本法，是治国安邦的总章程。公民的基本权利和义务是宪法的重要内容...</p>
                 <a class="read-more" href="#">阅读全文 →</a>
             </article>
 
@@ -94,24 +87,24 @@
             <div class="widget">
                 <h4>🏷️ 分类</h4>
                 <ul>
-                    <li><a href="#">📖 读书笔记 (1)</a></li>
-                    <li><a href="#">🏛️ 学习笔记 (2)</a></li>
+                    <li><a href="#">📖 读书笔记 (2)</a></li>
+                    <li><a href="#">🏛️ 学习笔记 (1)</a></li>
                     <li><a href="#">💡 随想 (1)</a></li>
                     <li><a href="#">📋 工作记录 (0)</a></li>
                 </ul>
             </div>
             <div class="widget">
                 <h4>👤 关于博主</h4>
-                <p>一位热爱阅读与思考的基层工作者，在这里记录工作中的感悟与成长。不定期分享读书心得与学习方法，欢迎交流 💬</p>
+                <p>程鑫虎，岚县上明乡基层公务员。喜欢读书、思考、写作。在这里记录工作和成长的点滴。</p>
             </div>
             <div class="widget">
-                <h4>🤖 AI 管理</h4>
-                <p>博客由 AI 助手「豆丁」自动化管理运维，文章内容持续更新中。</p>
+                <h4>🤖 管理</h4>
+                <p>博客由 AI 助手「豆丁」管理运维，文章内容持续更新中。</p>
             </div>
         </aside>
     </div>
     <footer>
-        <p>© 2026 小波工作博客 · 由 <span>豆丁</span> 驱动</p>
+        <p>© 2026 小波工作博客 · 由 <span>豆丁</span> 管理 | 岚县</p>
     </footer>
 </body>
 </html>
