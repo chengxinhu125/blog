@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小波工作博客</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #333; }
+        header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 3rem 1rem; text-align: center; position: relative; overflow: hidden; }
+        header::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); pointer-events: none; }
+        header .avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; letter-spacing: 2px; }
+        header p { opacity: 0.7; font-size: 0.95rem; }
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; display: grid; grid-template-columns: 1fr 280px; gap: 1.5rem; }
+        @media (max-width: 700px) { .container { grid-template-columns: 1fr; } }
+        .main-title { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #667eea; }
+        .main-title h2 { font-size: 1.2rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .main-title p { color: #666; font-size: 0.9rem; }
+        article { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+        article:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        article .tag { display: inline-block; background: linear-gradient(135deg, #667eea22, #764ba222); color: #667eea; font-size: 0.75rem; padding: 2px 10px; border-radius: 20px; margin-bottom: 0.8rem; }
+        article h3 { color: #1a1a2e; margin-bottom: 0.5rem; font-size: 1.15rem; }
+        article .date { color: #aaa; font-size: 0.8rem; margin-bottom: 0.8rem; }
+        article p { line-height: 1.9; color: #555; font-size: 0.95rem; }
+        article .summary { color: #666; line-height: 1.8; }
+        article .read-more { display: inline-block; margin-top: 0.8rem; color: #667eea; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        article .read-more:hover { text-decoration: underline; }
+        aside .widget { background: white; border-radius: 12px; padding: 1.2rem; margin-bottom: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        aside .widget h4 { font-size: 0.9rem; color: #1a1a2e; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea22; }
+        aside .widget ul { list-style: none; }
+        aside .widget li { padding: 0.4rem 0; border-bottom: 1px solid #f0f0f0; }
+        aside .widget li:last-child { border-bottom: none; }
+        aside .widget a { color: #555; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+        aside .widget a:hover { color: #667eea; }
+        aside .widget p { color: #888; font-size: 0.82rem; line-height: 1.6; }
+        .pagination { text-align: center; padding: 1rem 0; }
+        .pagination a { display: inline-block; padding: 6px 16px; background: white; color: #667eea; text-decoration: none; border-radius: 20px; font-size: 0.88rem; margin: 0 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+        .pagination a:hover { background: #667eea; color: white; }
+        footer { background: #1a1a2e; color: rgba(255,255,255,0.5); text-align: center; padding: 2rem 1rem; font-size: 0.82rem; margin-top: 2rem; }
+        footer span { color: #667eea; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="avatar">🤖</div>
+        <h1>小波工作博客</h1>
+        <p>记录工作 · 沉淀思考 · 分享成长</p>
+    </header>
+    <nav style="background:white;padding:0.8rem;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,0.06);">
+        <a href="index.html" style="color:#667eea;text-decoration:none;font-weight:500;margin:0 1rem;">🏠 首页</a>
+        <a href="music.html" style="color:#667eea;text-decoration:none;font-weight:500;margin:0 1rem;">🎵 音乐</a>
+    </nav>
+    <div class="container">
+        <main>
+            <div class="main-title">
+                <h2>📌 欢迎来到小波的工作博客</h2>
+                <p>这里会陆续更新工作中的思考、方法论、读书笔记和生活感悟。和我一起成长吧 📖</p>
+            </div>
+
+            <article>
+                <span class="tag">📖 读书笔记</span>
+                <h3>《底层逻辑》第三章：个体进化的底层逻辑</h3>
+                <div class="date">2026年4月18日</div>
+                <p class="summary">能力圈决定了你的成功——知道自己的能力边界，比盲目扩张更重要。核心观点：当你清晰地认知自己的能力圈边界时，才能做出真正理性的决策...</p>
+                <a class="read-more" href="#">阅读全文 →</a>
+            </article>
+
+            <article>
+                <span class="tag">🏛️ 学习笔记</span>
+                <h3>初二政治下册：第一单元 坚持宪法至上</h3>
+                <div class="date">2026年4月18日</div>
+                <p class="summary">宪法是国家的根本法，是治国安邦的总章程。公民的基本权利和义务是宪法的重要内容...</p>
+                <a class="read-more" href="#">阅读全文 →</a>
+            </article>
+
+            <article>
+                <span class="tag">💡 随想</span>
+                <h3>博客上线 🎉</h3>
+                <div class="date">2026年4月18日</div>
+                <p class="summary">欢迎来到小波的工作博客！这里将记录工作中的思考、方法和成长。豆丁将持续更新内容...</p>
+                <a class="read-more" href="#">阅读全文 →</a>
+            </article>
+        </main>
+
+        <aside>
+            <div class="widget">
+                <h4>🏷️ 分类</h4>
+                <ul>
+                    <li><a href="#">📖 读书笔记 (2)</a></li>
+                    <li><a href="#">🏛️ 学习笔记 (1)</a></li>
+                    <li><a href="#">💡 随想 (1)</a></li>
+                    <li><a href="#">📋 工作记录 (0)</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h4>👤 关于博主</h4>
+                <p>程鑫虎，岚县上明乡基层公务员。喜欢读书、思考、写作。在这里记录工作和成长的点滴。</p>
+            </div>
+            <div class="widget">
+                <h4>🤖 管理</h4>
+                <p>博客由 AI 助手「豆丁」管理运维，文章内容持续更新中。</p>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <p>© 2026 小波工作博客 · 由 <span>豆丁</span> 管理 | 岚县</p>
+    </footer>
+</body>
+</html>
